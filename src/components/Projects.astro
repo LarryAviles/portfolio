@@ -1,0 +1,43 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+import { getI18N } from "../i18n/utils";
+const { currentLocale } = Astro;
+const t = getI18N({ currentLocale });
+---
+
+<div class="flex flex-col gap-6 px-4 py-2">
+  <!-- <h2 class="text-xl font-semibold">{t.projects.titlePersonal}</h2>
+
+  {
+    t.projects.itemsPersonal.map(
+      ({ title, description, tags, image, more, link }) => (
+        <ProjectItem
+          title={title}
+          description={description}
+          tags={tags}
+          image={image}
+          more={more}
+          link={link}
+        />
+      )
+    )
+  } -->
+
+  <h2 class="text-xl font-semibold">{t.projects.titleColab}</h2>
+  <div class="flex justify-center items-center flex-wrap gap-4 lg:gap-6">
+    {
+      t.projects.itemsColab.map(
+        ({ title, description, tags, image, more, link }) => (
+            <ProjectItem
+              title={title}
+              description={description}
+              tags={tags}
+              image={image}
+              more={more}
+              link={link}
+            />
+        )
+      )
+    }
+  </div>
+</div>

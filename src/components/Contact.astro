@@ -1,0 +1,38 @@
+---
+import { getI18N } from "../i18n/utils";
+import meVideo from "@/assets/me-video.mp4";
+import { ContactFormCard } from "@/form/components/ContactForm";
+const { currentLocale } = Astro;
+const t = getI18N({ currentLocale });
+---
+
+<div
+  class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-16"
+>
+  <div
+    class="animate-on-scroll flex flex-col justify-center items-center w-full md:w-1/2 order-2 md:order-1"
+  >
+    <ContactFormCard
+      client:load
+      subTitle={t.contact.subTitle}
+      buttonText={t.contact.button}
+      placeHolder={t.contact.placeHolder}
+      message={t.contact.message}
+      description={t.contact.description}
+      label={t.contact.label}
+      form={t.contact.form}
+    />
+  </div>
+  <video
+    autoplay
+    loop
+    muted
+    playsinline
+    controlslist="nodownload nofullscreen noremoteplayback"
+    disablepictureinpicture
+    oncontextmenu="return false;"
+    class="animate-on-scroll w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-2 border-primary order-1 md:order-2"
+  >
+    <source src={meVideo} type="video/mp4" />
+  </video>
+</div>

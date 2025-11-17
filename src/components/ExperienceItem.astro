@@ -1,0 +1,36 @@
+---
+import { Button } from "@/components/ui/button";
+import { LucideExternalLink } from "lucide-react";
+interface ExperienceItemProps {
+  title: string;
+  date: string;
+  description: string;
+  link?: string;
+  more: string;
+}
+
+const { title, date, description, link, more } =
+  Astro.props as ExperienceItemProps;
+---
+
+<div
+  class="absolute w-4 h-4 bg-secondary rounded-full mt-1 -start-8 border border-white dark:border-gray-900 dark:bg-secondary drop-shadow-[0px_0px_8px_rgba(0.55,_255,_94,_1)]"
+>
+</div>
+<h3 class="text-xl font-semibold">
+  {title}
+</h3>
+<time class="mb-1 text-sm leading-none">{date}</time>
+<p class="mb-4 pt-5 opacity-80 leading-7 text-balance">
+  {description}
+</p>
+
+{
+  link && (
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <Button variant="outline" className="cursor-pointer">
+        {more} <LucideExternalLink className="size-4 ml-2" />
+      </Button>
+    </a>
+  )
+}

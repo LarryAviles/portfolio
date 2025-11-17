@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import Badge from "../components/Badge.astro";
+import SocialButton from "../components/SocialButton.astro";
+import LinkedInIcon from "@/assets/icons/linkedin.svg";
+import { IconCloudProfile } from "@/components/IconCloud";
+import { TypingAnimation } from "./ui/typing-animation";
+import { getI18N } from "../i18n/utils";
+import { LucideMail } from "lucide-react";
+const { currentLocale } = Astro;
+const t = getI18N({ currentLocale });
+---
+
+<div class="flex flex-col md:flex-row relative">
+  <div
+    class="flex flex-col md:flex-row md:gap-6 lg:gap-8 items-center justify-center md:justify-start flex-wrap p-2"
+  >
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+      <div>
+        <Image
+          src="/images/me.png"
+          class="rounded-full"
+          alt="Foto de Larry"
+          loading="eager"
+          width="160"
+          height="160"
+        />
+      </div>
+      <div class="justify-center text-center md:text-left">
+        <Badge>{t.hero.badge}</Badge>
+        <h1
+          class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-gradient"
+          style="background-size: 200% 200%;"
+        >
+          <TypingAnimation client:load words={[t.hero.title]} />
+        </h1>
+      </div>
+    </div>
+
+    <div class="justify-center items-center text-center md:text-left animate-in fade-in slide-in-from-left-8 duration-500">
+      <h2 class="text-md md:text-xl lg:text-3xl font-bold opacity-90">
+        <span class="text-primary">{t.hero.subtitle02}</span>
+        {t.hero.subtitle}
+      </h2>
+      <p class="text-sm md:text-md lg:text-lg opacity-80 pt-4 text-balance">
+        {t.hero.description}
+      </p>
+
+      <div
+        class="flex gap-2 md:gap-4 pt-6 items-center justify-center md:justify-start flex-wrap"
+      >
+        <SocialButton href="mailto:larry.aviles.la@gmail.com">
+            <LucideMail className="size-4 lg:size-6" />{t.hero.contact}
+        </SocialButton>
+        <SocialButton href="https://www.linkedin.com/in/larry-aviles-5a8a18277/">
+          <LinkedInIcon class="size-4 lg:size-6" />LinkedIn
+        </SocialButton>
+      </div>
+    </div>
+  </div>
+  <IconCloudProfile client:load />
+</div>

@@ -1,0 +1,61 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+import SkillsPills from "./SkillsPills.astro";
+import { getI18N } from "@/i18n/utils";
+import { LucideExternalLink } from "lucide-react";
+const { currentLocale } = Astro;
+const t = getI18N({ currentLocale });
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4 mb-20">
+  {
+    t.experience.items.map((experience, index) => (
+      <li
+        class="animate-on-scroll mb-10 md:mb-18 ms-6"
+        style={`transition-delay: ${index * 150}ms;`}
+      >
+        <ExperienceItem {...experience} more={t.experience.more} />
+      </li>
+    ))
+  }
+</ol>
+<div class="flex flex-col justify-center items-center mb-10 md:mb-18">
+  <h2
+    class="text-2xl md:text-3xl font-semibold mb-5 flex gap-x-2 justify-center items-center"
+  >
+    {t.experience.subtitle02}
+  </h2>
+  <div class="flex flex-wrap justify-center items-center gap-2 md:gap-6">
+    {
+      t.experience.certifications.map((certification) => (
+        <div class="animate-on-scroll">
+          <a
+            href={certification.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-col justify-center transition-all duration-300 hover:scale-105 hover:bg-gradient-to-br hover:from-primary/10 hover:to-secondary/10 rounded-2xl items-center p-4 gap-2 text-sm md:text-base font-medium text-primary dark:text-foreground text-balance"
+          >
+            <img
+              alt={certification.altTitle}
+              src={certification.image}
+              loading="lazy"
+              class="w-40 h-40"
+            />
+
+            <span class="text-center max-w-[32ch] line-clamp-2 font-semibold underline">
+              {certification.title}
+            </span>
+            <LucideExternalLink className="size-4 ml-2" />
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<h2
+  class="text-2xl md:text-3xl font-semibold mb-5 flex gap-x-2 justify-center items-center"
+>
+  {t.experience.subtitle}
+</h2>
+<SkillsPills />

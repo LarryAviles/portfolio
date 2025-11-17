@@ -1,0 +1,84 @@
+---
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { LucideExternalLink } from "lucide-react";
+import { getI18N } from "@/i18n/utils";
+import skills from "@/data/skills";
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  description: string;
+  tags?: string[];
+  image?: string;
+  more?: string;
+  link?: string;
+}
+const { title, description, tags, image, link, more } = Astro.props as Props;
+const { currentLocale } = Astro;
+const t = getI18N({ currentLocale });
+---
+
+<Card className="w-xl md:w-sm lg:w-md md:min-h-[560px] pt-0">
+  {
+    image && (
+      <div class="w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <Image
+            src={image}
+            alt={title}
+            width={446}
+            height={250}
+            loading="lazy"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
+          />
+        </a>
+      </div>
+    )
+  }
+  <div class="animate-on-scroll flex flex-col justify-between gap-4 flex-1">
+    <CardHeader>
+      <CardTitle>{title}</CardTitle>
+      <CardDescription>{description}</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <div class="flex py-2 gap-2 flex-wrap">
+        {
+          tags?.map((tag) => {
+            const skill = skills.find((s) => s.name === tag);
+            return skill ? (
+              <span
+                class={`flex justify-center items-center border-1 border-${skill.color} gap-x-2 text-sm rounded-full px-3 py-1.5 ${skill.class}`}
+              >
+                <Image 
+                  src={skill.icon} 
+                  alt={skill.name} 
+                  width={24}
+                  height={24}
+                  class="size-6" 
+                />
+                {skill.name}
+              </span>
+            ) : null;
+          })
+        }
+      </div>
+    </CardContent>
+    <CardFooter>
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <Button variant="outline" className="cursor-pointer">
+          {more}
+          <LucideExternalLink className="size-4 ml-2" />
+        </Button>
+      </a>
+    </CardFooter>
+  </div>
+</Card>

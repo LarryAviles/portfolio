@@ -1,0 +1,27 @@
+---
+import skills from "@/data/skills";
+---
+
+<div class="flex justify-center items-center py-2 gap-2 md:gap-4 flex-wrap">
+  {
+    skills.map(({ name, class: className, icon: Icon, color: Color }) => (
+      <div
+        class={`animate-on-scroll flex items-center gap-2 px-3 py-2 md:px-4 md:py-3 rounded-full text-base md:text-lg font-medium border-1 border-${Color} ${className}`}
+      >
+        <Icon class="size-5 md:size-6" />
+        <span>{name}</span>
+      </div>
+    ))
+  }
+</div>
+
+<script>
+  import { initAnimateOnScroll } from "@/utils/animateOnScroll";
+
+  initAnimateOnScroll({
+    selector: '.animate-on-scroll',
+    rootMargin: '0px 0px -100px 0px',
+    threshold: 0.1,
+    once: true,
+  });
+</script>

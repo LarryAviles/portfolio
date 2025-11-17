@@ -1,0 +1,83 @@
+---
+import { LanguagePicker } from "./LanguagePicker";
+import { getI18N, getLangFromUrl } from "../i18n/utils";
+import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
+import { Separator } from "@/components/ui/separator";
+import { FileUserIcon, FolderCodeIcon, ContactIcon } from "lucide-react";
+import { Image } from "astro:assets";
+import logo from "@/assets/logo.svg";
+import logoBlack from "@/assets/logo-black.svg";
+const { currentLocale } = Astro;
+const t = getI18N({ currentLocale });
+const nav = [
+  { href: "#experience", label: t.nav.experience, icon: FileUserIcon },
+  { href: "#projects", label: t.nav.projects, icon: FolderCodeIcon },
+  { href: "#contact", label: t.nav.contact, icon: ContactIcon },
+];
+---
+
+<header class="w-full flex justify-center fixed top-2 z-30">
+  <nav class="transition-all duration-300 rounded-xl p-2">
+    <div class="flex justify-center">
+      <ul
+        class="flex gap-2.5 md:gap-4 lg:gap-6 items-center text-sm font-medium"
+      >
+        <a href="#top" class="flex-shrink-0">
+          <Image
+            src={logo}
+            alt="Logo"
+            loading="eager"
+            width={40}
+            height={40}
+            class="hidden dark:block w-[30px] h-[30px] md:w-[35px] md:h-[35px] lg:w-[40px] lg:h-[40px]"
+          />
+          <Image
+            src={logoBlack}
+            alt="Logo"
+            loading="eager"
+            width={40}
+            height={40}
+            class="block dark:hidden w-[30px] h-[30px] md:w-[35px] md:h-[35px] lg:w-[40px] lg:h-[40px]"
+          />
+        </a>
+        {
+          nav.map((item, index) => (
+            <li>
+              <a
+                href={item.href}
+                class="flex justify-center items-center gap-x-1 text-xs md:text-sm lg:text-base transition-color duration-300 active:text-primary dark:active:text-primary hover:text-primary dark:hover:text-primary"
+              >
+                <item.icon className="inline-block" />
+                <span class="hidden md:inline">{item.label}</span>
+              </a>
+            </li>
+          ))
+        }
+
+        <Separator orientation="vertical" />
+        <LanguagePicker
+          client:load
+          currentLang={getLangFromUrl(Astro.url)}
+          languageLabel={t.languageLabel}
+        />
+        <AnimatedThemeToggler
+          client:load
+          className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+        />
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script is:inline>
+  const nav = document.querySelector("nav");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      nav.classList.add("bg-card", "backdrop-blur-md", "shadow-md");
+      nav.classList.remove("bg-transparent");
+    } else {
+      nav.classList.remove("bg-card", "backdrop-blur-md", "shadow-md");
+      nav.classList.add("bg-transparent");
+    }
+  });
+</script>
