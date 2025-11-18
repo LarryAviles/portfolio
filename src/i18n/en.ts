@@ -2,7 +2,7 @@ export default {
   metadata: {
     title: "Larry Aviles Portfolio - Software Engineer",
     description:
-      "Software Engineer with 5+ years of experience in web applications; specialized in integrating AI models to automate processes and enhance user experience.",
+      "Software Engineer with over 5 years of experience in web applications. Specialized in web development, using AI to improve efficiency and automate processes.",
   },
   languageLabel: "Language",
   languageOptions: {
@@ -24,7 +24,7 @@ export default {
     subtitle: "+5 years of experience.",
     subtitle02: "Full Stack",
     description:
-      "Software Engineer with +5 years of experience in web applications; specialized in integrating AI models to automate processes and enhance user experience.",
+      "Software Engineer with over 5 years of experience in web applications. Specialized in web development, using AI to improve efficiency and automate processes.",
     contact: "Contact Me",
   },
   experience: {
@@ -83,6 +83,7 @@ export default {
     title: "Projects",
     titlePersonal: "Personal Projects",
     titleColab: "Collaborative Projects",
+    colabNote: "Note: In all collaborative projects, the design and content were provided by the team. My involvement was exclusively in development and technical implementation.",
     itemsPersonal: [
       {
         title: "PHP/Laravel Blog",
@@ -98,42 +99,42 @@ export default {
       {
         title: "Blue Ocean Group Website",
         description:
-          "Collaboration on a Blue Ocean Group website using Astro with Tailwind CSS and JavaScript.",
+          "Development and implementation of the Grupo Blue Ocean website using Astro, Tailwind CSS, and JavaScript.",
         image: "/images/grupoblueocean-website.webp",
         link: "https://grupoblueocean.com/",
         github: "#",
         tags: ["Astro", "Tailwind CSS", "JavaScript"],
-        more: "See more",
+        more: "View Site",
       },
       {
         title: "Software Technology Institute Website",
         description:
-          "Collaboration on a Software Technology Institute website using WordPress with CSS and JavaScript.",
+          "Development and publication of the Tecnológico de Software website using WordPress with CSS and JavaScript.",
         image: "/images/tec-website.webp",
         link: "https://tecdesoftware.edu.mx/",
         github: "#",
         tags: ["WordPress", "CSS", "JavaScript"],
-        more: "See more",
+        more: "View Site",
       },
       {
         title: "eGob Website",
         description:
-          "Collaboration on an eGob website using WordPress with CSS and JavaScript.",
+          "Development and publication of the eGob website using WordPress with CSS and JavaScript.",
         image: "/images/egob-website.webp",
         link: "https://egob.com/",
         github: "#",
         tags: ["WordPress", "CSS", "JavaScript"],
-        more: "See more",
+        more: "View Site",
       },
       {
         title: "Ecce Homo Web Application",
         description:
-          "Collaboration on an Ecce Homo web application using NextJS with Tailwind CSS.",
+          "Responsible for the development and deployment of the Ecce Homo web application using Next.js and Strapi.",
         image: "/images/eccehomo-website.webp",
         link: "https://eccehomo.org/",
         github: "#",
         tags: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Strapi"],
-        more: "See more",
+        more: "View Site",
       },
     ],
   },

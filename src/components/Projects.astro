@@ -28,16 +28,19 @@ const t = getI18N({ currentLocale });
     {
       t.projects.itemsColab.map(
         ({ title, description, tags, image, more, link }) => (
-            <ProjectItem
-              title={title}
-              description={description}
-              tags={tags}
-              image={image}
-              more={more}
-              link={link}
-            />
+          <ProjectItem
+            title={title}
+            description={description}
+            tags={tags}
+            image={image}
+            more={more}
+            link={link}
+          />
         )
       )
     }
   </div>
+  <p class="text-xs md:text-sm lg:text-md opacity-60 mb-4">
+    {t.projects.colabNote}
+  </p>
 </div>

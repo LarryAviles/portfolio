@@ -2,7 +2,7 @@ export default {
   metadata: {
     title: "Portafolio de Larry Aviles - Ingeniero de Software",
     description:
-      "Ingeniero de software con 5+ años de experiencia en apps web; especializado en integrar modelos de IA para automatizar procesos y mejorar la experiencia de usuario.",
+      "Ingeniero de Software con más de 5 años de experiencia en aplicaciones web. Especializado en el desarrollo web, utilizando la IA para mejorar la eficiencia y automatizar procesos.",
   },
   languageLabel: "Idioma",
   languageOptions: {
@@ -24,7 +24,7 @@ export default {
     subtitle: "+5 años de experiencia.",
     subtitle02: "Full Stack",
     description:
-      "Ingeniero de Software con +5 años de experiencia en apps web; especializado en integrar modelos de IA para automatizar procesos y mejorar la experiencia de usuario.",
+      "Ingeniero de Software con más de 5 años de experiencia en aplicaciones web. Especializado en el desarrollo web, utilizando la IA para mejorar la eficiencia y automatizar procesos.",
     contact: "Contáctame",
   },
 
@@ -66,7 +66,8 @@ export default {
       {
         date: "2024",
         title: "Microsoft Certified: Asociado de administrador de Azure",
-        altTitle: "Imagen del certificado de Microsoft Certified: Asociado de administrador de Azure",
+        altTitle:
+          "Imagen del certificado de Microsoft Certified: Asociado de administrador de Azure",
         image: "/images/certifications/microsoft-certified-associate-badge.svg",
         link: "https://learn.microsoft.com/api/credentials/share/es-es/LarryIvanAvilesCastillo-6799/1E03F90E554EC580?sharingId=4E78E29982EE1BD9",
       },
@@ -74,7 +75,8 @@ export default {
         date: "2025",
         title:
           "Microsoft Certified: Experto en arquitecto de soluciones de Azure",
-        altTitle: "Imagen del certificado de Microsoft Certified: Experto en arquitecto de soluciones de Azure",
+        altTitle:
+          "Imagen del certificado de Microsoft Certified: Experto en arquitecto de soluciones de Azure",
         image: "/images/certifications/microsoft-certified-expert-badge.svg",
         link: "https://learn.microsoft.com/api/credentials/share/es-es/LarryIvanAvilesCastillo-6799/D4AEE0E69083711E?sharingId=4E78E29982EE1BD9",
       },
@@ -86,6 +88,8 @@ export default {
     title: "Proyectos",
     titlePersonal: "Proyectos Personales",
     titleColab: "Proyectos Colaborativos",
+    colabNote:
+      "Nota: En todos los proyectos colaborativos, el diseño y el contenido fueron proporcionados por el equipo. Mi participación se centró exclusivamente en el desarrollo y la implementación técnica.",
     itemsPersonal: [
       {
         title: "Blog PHP/Laravel",
@@ -101,42 +105,42 @@ export default {
       {
         title: "Sitio Web de Grupo Blue Ocean",
         description:
-          "Colaboración de un sitio web de Grupo Blue Ocean usando Astro con Tailwind CSS y JavaScript.",
+          "Desarrollo e implementación del sitio web de Grupo Blue Ocean con Astro, Tailwind CSS y JavaScript.",
         image: "/images/grupoblueocean-website.webp",
         link: "https://grupoblueocean.com/",
         github: "#",
         tags: ["Astro", "Tailwind CSS", "JavaScript"],
-        more: "Ver más",
+        more: "Ver Sitio",
       },
       {
         title: "Sitio Web del Tecnológico de Software",
         description:
-          "Colaboración de un sitio web del Tecnológico de Software usando WordPress con CSS y JavaScript.",
+          "Desarrollo y publicación del sitio web del Tecnológico de Software usando WordPress con CSS y JavaScript.",
         image: "/images/tec-website.webp",
         link: "https://tecdesoftware.edu.mx/",
         github: "#",
         tags: ["WordPress", "CSS", "JavaScript"],
-        more: "Ver más",
+        more: "Ver Sitio",
       },
       {
         title: "Sitio Web de eGob",
         description:
-          "Colaboración de un sitio web de eGob usando WordPress con CSS y JavaScript.",
+          "Desarrollo y publicación del sitio web de eGob usando WordPress con CSS y JavaScript.",
         image: "/images/egob-website.webp",
         link: "https://egob.com/",
         github: "#",
         tags: ["WordPress", "CSS", "JavaScript"],
-        more: "Ver más",
+        more: "Ver Sitio",
       },
       {
         title: "Aplicación Web de Ecce Homo",
         description:
-          "Colaboración de una aplicación web de Ecce Homo usando NextJS con Tailwind CSS.",
+          "Responsable del desarrollo y despliegue de una aplicación web de Ecce Homo usando NextJS y Strapi.",
         image: "/images/eccehomo-website.webp",
         link: "https://eccehomo.org/",
         github: "#",
         tags: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Strapi"],
-        more: "Ver más",
+        more: "Ver Sitio",
       },
     ],
   },
