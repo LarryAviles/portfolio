@@ -88,8 +88,6 @@ export default {
     title: "Proyectos",
     titlePersonal: "Proyectos Personales",
     titleColab: "Proyectos Colaborativos",
-    colabNote:
-      "Nota: En todos los proyectos colaborativos, el diseño y el contenido fueron proporcionados por el equipo. Mi participación se centró exclusivamente en el desarrollo y la implementación técnica.",
     itemsPersonal: [
       {
         title: "Blog PHP/Laravel",
@@ -105,7 +103,7 @@ export default {
       {
         title: "Sitio Web de Grupo Blue Ocean",
         description:
-          "Desarrollo e implementación del sitio web de Grupo Blue Ocean con Astro, Tailwind CSS y JavaScript.",
+          "Desarrollo e implementación del sitio web de Grupo Blue Ocean con Astro, Tailwind CSS y JavaScript. Trabajando con el equipo de Marketing para el diseño y contenido.",
         image: "/images/grupoblueocean-website.webp",
         link: "https://grupoblueocean.com/",
         github: "#",
@@ -115,7 +113,7 @@ export default {
       {
         title: "Sitio Web del Tecnológico de Software",
         description:
-          "Desarrollo y publicación del sitio web del Tecnológico de Software usando WordPress con CSS y JavaScript.",
+          "Desarrollo y publicación del sitio web del Tecnológico de Software usando WordPress con CSS y JavaScript. Trabajando con el equipo de Marketing para el diseño y contenido.",
         image: "/images/tec-website.webp",
         link: "https://tecdesoftware.edu.mx/",
         github: "#",
@@ -125,7 +123,7 @@ export default {
       {
         title: "Sitio Web de eGob",
         description:
-          "Desarrollo y publicación del sitio web de eGob usando WordPress con CSS y JavaScript.",
+          "Desarrollo y publicación del sitio web de eGob usando WordPress con CSS y JavaScript. Trabajando con el equipo de Marketing para el diseño y contenido.",
         image: "/images/egob-website.webp",
         link: "https://egob.com/",
         github: "#",
@@ -135,7 +133,7 @@ export default {
       {
         title: "Aplicación Web de Ecce Homo",
         description:
-          "Responsable del desarrollo y despliegue de una aplicación web de Ecce Homo usando NextJS y Strapi.",
+          "Responsable del desarrollo y despliegue de una aplicación web de Ecce Homo usando NextJS y Strapi. Trabajando con el equipo de Innovación para el diseño y contenido.",
         image: "/images/eccehomo-website.webp",
         link: "https://eccehomo.org/",
         github: "#",
