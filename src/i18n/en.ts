@@ -1,8 +1,8 @@
 export default {
   metadata: {
-    title: "Larry Aviles Portfolio - Full-Stack Software Developer",
+    title: "Larry Aviles Portfolio - Software Engineer",
     description:
-      "Software Developer with 5+ years of experience in web applications; specialized in integrating AI models to automate processes and enhance user experience.",
+      "Software Engineer with 5+ years of experience in web applications; specialized in integrating AI models to automate processes and enhance user experience.",
   },
   languageLabel: "Language",
   languageOptions: {

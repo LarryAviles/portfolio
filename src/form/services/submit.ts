@@ -10,6 +10,7 @@ export const submitForm = async (data: { email: string; message: string }) => {
     return {
       duplicated: true,
       success: false,
+      error: true,
     };
   }
 
@@ -17,11 +18,13 @@ export const submitForm = async (data: { email: string; message: string }) => {
     return {
       duplicated: false,
       success: false,
+      error: true,
     };
   }
 
   return {
     duplicated: false,
     success: true,
+    error: false,
   };
 };

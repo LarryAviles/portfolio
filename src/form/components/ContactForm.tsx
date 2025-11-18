@@ -68,6 +68,7 @@ export function ContactFormCard({
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [showMessage, setShowMessage] = useState(false);
   const [showDuplicatedMessage, setShowDuplicatedMessage] = useState(false);
+  const [showErrorMessage, setShowErrorMessage] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
@@ -115,6 +116,11 @@ export function ContactFormCard({
       if (data.data?.duplicated) {
         setShowDuplicatedMessage(true);
         setTimeout(() => setShowDuplicatedMessage(false), 5000);
+        return;
+      }
+      if (data.data?.error) {
+        setShowErrorMessage(true);
+        setTimeout(() => setShowErrorMessage(false), 5000);
         return;
       }
       if (data.data?.success) {
@@ -181,6 +187,11 @@ export function ContactFormCard({
             <div className="flex items-center text-destructive">
               <X className="size-4 lg:size-6" />
               <div className="mt-1 text-sm opacity-60">{form.duplicate}</div>
+            </div>
+          )}
+          {showErrorMessage && (
+            <div className="flex items-center text-destructive">
+              <div className="mt-1 text-sm opacity-60">{form.error}</div>
             </div>
           )}
         </CardFooter>

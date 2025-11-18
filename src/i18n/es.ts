@@ -1,8 +1,8 @@
 export default {
   metadata: {
-    title: "Portafolio de Larry Aviles - Desarrollador de Software Full-Stack",
+    title: "Portafolio de Larry Aviles - Ingeniero de Software",
     description:
-      "Desarrollador de software con 5+ años de experiencia en apps web; especializado en integrar modelos de IA para automatizar procesos y mejorar la experiencia de usuario.",
+      "Ingeniero de software con 5+ años de experiencia en apps web; especializado en integrar modelos de IA para automatizar procesos y mejorar la experiencia de usuario.",
   },
   languageLabel: "Idioma",
   languageOptions: {

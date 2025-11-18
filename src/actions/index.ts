@@ -12,7 +12,7 @@ export const server = {
       message: z.string(),
     }),
     async handler({ email, message }) {
-      const { duplicated, success } = await submitForm({
+      const { duplicated, success, error } = await submitForm({
         email,
         message,
       });
@@ -20,6 +20,7 @@ export const server = {
       return {
         success,
         duplicated,
+        error,
       };
     },
   }),
