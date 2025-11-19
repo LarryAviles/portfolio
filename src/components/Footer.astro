@@ -1,13 +1,15 @@
 ---
 import { Separator } from "@/components/ui/separator";
-import { Image } from "astro:assets";
+import { getI18N } from "@/i18n/utils";
+const { currentLocale } = Astro;
+const t = getI18N({ currentLocale });
 ---
 
 <footer class="flex flex-col justify-center items-center py-4">
   <div class="flex flex-col max-w-lg w-full px-4">
     <Separator className="my-4" />
     <p class="text-sm text-center opacity-70">
-      {new Date().getFullYear()} Larry Aviles.
+      <a href={`mailto:${t.footer.email}`}>{t.footer.email}</a>
     </p>
   </div>
 </footer>

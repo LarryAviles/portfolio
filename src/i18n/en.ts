@@ -65,14 +65,16 @@ export default {
       {
         date: "2024",
         title: "Microsoft Certified: Azure Administrator Associate",
-        altTitle: "Image of the Microsoft Certified: Azure Administrator Associate certificate",
+        altTitle:
+          "Image of the Microsoft Certified: Azure Administrator Associate certificate",
         image: "/images/certifications/microsoft-certified-associate-badge.svg",
         link: "https://learn.microsoft.com/api/credentials/share/en-us/LarryIvanAvilesCastillo-6799/1E03F90E554EC580?sharingId=4E78E29982EE1BD9",
       },
       {
         date: "2025",
         title: "Microsoft Certified: Azure Solutions Architect Expert",
-        altTitle: "Image of the Microsoft Certified: Azure Solutions Architect Expert certificate",
+        altTitle:
+          "Image of the Microsoft Certified: Azure Solutions Architect Expert certificate",
         image: "/images/certifications/microsoft-certified-expert-badge.svg",
         link: "https://learn.microsoft.com/api/credentials/share/en-us/LarryIvanAvilesCastillo-6799/D4AEE0E69083711E?sharingId=4E78E29982EE1BD9",
       },
@@ -98,7 +100,7 @@ export default {
       {
         title: "Blue Ocean Group Website",
         description:
-          "Development and implementation of the Grupo Blue Ocean website using Astro, Tailwind CSS, and JavaScript. Working with the Marketing team for design and content.",
+          "Development and implementation of the Grupo Blue Ocean website using Astro, Tailwind CSS, and JavaScript. Working with the Innovation team for design and content.",
         image: "/images/grupoblueocean-website.webp",
         link: "https://grupoblueocean.com/",
         github: "#",
@@ -158,5 +160,8 @@ export default {
         messageRequired: "Message is required",
       },
     },
+  },
+  footer: {
+    email: "hi@larryaviles.com",
   },
 };

@@ -103,7 +103,7 @@ export default {
       {
         title: "Sitio Web de Grupo Blue Ocean",
         description:
-          "Desarrollo e implementación del sitio web de Grupo Blue Ocean con Astro, Tailwind CSS y JavaScript. Trabajando con el equipo de Marketing para el diseño y contenido.",
+          "Desarrollo e implementación del sitio web de Grupo Blue Ocean con Astro, Tailwind CSS y JavaScript. Trabajando con el equipo de Innovación para el diseño y contenido.",
         image: "/images/grupoblueocean-website.webp",
         link: "https://grupoblueocean.com/",
         github: "#",
@@ -162,5 +162,9 @@ export default {
         messageRequired: "El mensaje es requerido",
       },
     },
+  },
+
+  footer: {
+    email: "hi@larryaviles.com",
   },
 };
