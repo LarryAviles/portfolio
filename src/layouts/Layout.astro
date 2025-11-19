@@ -4,7 +4,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import "@fontsource-variable/space-grotesk";
 import { getLangFromUrl } from "@/i18n/utils";
-import Analytics from '@vercel/analytics/astro';
+import Analytics from "@vercel/analytics/astro";
 
 const lang = getLangFromUrl(Astro.url);
 interface Props {
@@ -21,16 +21,22 @@ const { title, description } = Astro.props as Props;
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#09090b" />
     <meta name="description" content={description} />
-    <meta name="keywords" content="Larry Aviles, Portfolio, Developer, Projects, Contact" />
+    <meta
+      name="keywords"
+      content="Larry Aviles, Portfolio, Developer, Projects, Contact"
+    />
     <meta name="author" content="Larry Aviles" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     <script is:inline>
-      const theme = localStorage.getItem('theme');
-      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
+      const theme = localStorage.getItem("theme");
+      if (
+        theme === "dark" ||
+        (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
       } else {
-        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.remove("dark");
       }
     </script>
   </head>
@@ -38,15 +44,16 @@ const { title, description } = Astro.props as Props;
     <Header />
     <slot />
     <Footer />
+    <Analytics />
   </body>
 </html>
 
 <script>
   import { initAnimateOnScroll } from "@/utils/animateOnScroll";
-  
+
   initAnimateOnScroll({
-    selector: '.animate-on-scroll',
-    rootMargin: '0px 0px -100px 0px',
+    selector: ".animate-on-scroll",
+    rootMargin: "0px 0px -100px 0px",
     threshold: 0.1,
     once: true,
   });
