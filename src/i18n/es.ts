@@ -21,10 +21,10 @@ export default {
     hello: "Hola Mundo",
     title: "Hola que tal, soy Larry",
     badge: "Ingeniero de Software",
-    subtitle: "+5 años de experiencia.",
+    subtitle: "+6 años de experiencia.",
     subtitle02: "Full Stack",
     description:
-      "Ingeniero de Software con más de 5 años de experiencia en aplicaciones web. Especializado en el desarrollo web, utilizando la IA para mejorar la eficiencia y automatizar procesos.",
+      "Ingeniero de Software con más de 6 años de experiencia en aplicaciones web. Especializado en el desarrollo web, utilizando la IA para mejorar la eficiencia y automatizar procesos.",
     contact: "Contáctame",
   },
 

@@ -21,10 +21,10 @@ export default {
     hello: "Hello World",
     title: "Hi there, I'm Larry",
     badge: "Software Engineer",
-    subtitle: "+5 years of experience.",
+    subtitle: "+6 years of experience.",
     subtitle02: "Full Stack",
     description:
-      "Software Engineer with over 5 years of experience in web applications. Specialized in web development, using AI to improve efficiency and automate processes.",
+      "Software Engineer with over 6 years of experience in web applications. Specialized in web development, using AI to improve efficiency and automate processes.",
     contact: "Contact Me",
   },
   experience: {
