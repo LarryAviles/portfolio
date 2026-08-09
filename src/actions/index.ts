@@ -1,5 +1,5 @@
-import { ActionError, defineAction } from "astro:actions";
-import { z } from "astro:schema";
+import { defineAction } from "astro:actions";
+import { z } from "astro/zod";
 import { submitForm } from "@/form/services/submit";
 
 export const server = {
@@ -8,7 +8,7 @@ export const server = {
       email: z
         .string()
         .min(1, "Email is required")
-        .email("Invalid email address"),
+        .pipe(z.email("Invalid email address")),
       message: z.string(),
     }),
     async handler({ email, message }) {
