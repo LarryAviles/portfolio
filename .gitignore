@@ -7,6 +7,10 @@ dist/
 
 # dependencies
 node_modules/
+.pnpm-store/
+
+# isolated development worktrees
+.worktrees/
 
 # logs
 npm-debug.log*
